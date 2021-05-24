@@ -1,0 +1,20 @@
+package com.cognizant.microservice.model;
+
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Entity
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
+public class Account
+{
+	@Id
+	private long number;
+	private String type;
+	private double balance;
+}

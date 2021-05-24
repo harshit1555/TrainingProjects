@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: api-gateway
+server:
+  port: 8888
+  
+
+zuul:    
+  routes:
+    menu-item-service:
+      path: /menu-item/**
+      service-id: menu-item-service
+      strip-prefix: false
+      
+      
+      
+    

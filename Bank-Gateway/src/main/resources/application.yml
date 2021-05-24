@@ -1,0 +1,25 @@
+spring:
+  application:
+    name: api-gateway
+server:
+  port: 8111
+  
+
+zuul:
+  host:
+    connect-timeout-millis: 10000
+    socket-timeout-millis: 10000
+    
+  routes:
+    
+    account-service:
+      path: /bank-account/**
+      service-id: account-service
+      strip-prefix: false
+      
+    loan-service:
+      path: /bank-loan/**
+      service-id: loan-service
+      strip-prefix: false
+      
+      
